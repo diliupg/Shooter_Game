@@ -33,4 +33,5 @@ private:
 	void MoveForward( float MoveValue );
 	void MoveRight( float MoveValue );
 	void LookUp( float MoveValue );
+	void LookSides( float MoveValue );
 };

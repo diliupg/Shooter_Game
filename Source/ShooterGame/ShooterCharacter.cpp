@@ -37,6 +37,7 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 	PlayerInputComponent->BindAxis( TEXT( "MoveForward" ), this, &AShooterCharacter::MoveForward );
 	PlayerInputComponent->BindAxis( TEXT( "MoveRight" ), this, &AShooterCharacter::MoveRight );
 	PlayerInputComponent->BindAxis( TEXT( "Lookup" ), this, &AShooterCharacter::LookUp );
+	PlayerInputComponent->BindAxis( TEXT( "LookSides" ), this, &AShooterCharacter::LookSides );
 }
 
 void AShooterCharacter::MoveForward( float MoveValue )
@@ -55,5 +56,11 @@ void AShooterCharacter::LookUp( float MoveValue )
 {
 	UE_LOG( LogTemp, Warning, TEXT( "Look Up-Down: %f" ), MoveValue );
 	AddControllerPitchInput( MoveValue );
+}
+
+void AShooterCharacter::LookSides( float MoveValue )
+{
+	UE_LOG( LogTemp, Warning, TEXT( "Look Left-Right: %f" ), MoveValue );
+	AddControllerYawInput( MoveValue );
 }
 
