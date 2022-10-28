@@ -19,7 +19,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	virtual void AddMovementInput( FVector WorldDirection, float ScaleValue, bool bForce );
+	//virtual void AddMovementInput( FVector WorldDirection, float ScaleValue, bool bForce );
 
 public:	
 	// Called every frame
@@ -32,4 +32,5 @@ private:
 
 	void MoveForward( float MoveValue );
 	void MoveRight( float MoveValue );
+	void LookUp( float MoveValue );
 };
